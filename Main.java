@@ -68,4 +68,27 @@ public class Main {
                 case 7:
                     System.out.println("¿Está llena? " + (licuadora.estarLlena() ? "Sí" : "No"));
                     break;
+                case 8:
+                    double gramosVaciados = licuadora.vaciar();
+                    System.out.println("Se han vaciado " + gramosVaciados + " gramos.");
+                    break;
+                case 9:
+                    System.out.print("Ingresa el peso a servir (en gramos): ");
+                    double gramosServidos = scanner.nextDouble();
+                    double resultadoServir = licuadora.servir(gramosServidos);
+                    if (resultadoServir == -1) {
+                        System.out.println("Error: el peso no es válido.");
+                    } else {
+                        System.out.println("Peso restante en la licuadora: " + resultadoServir + " gramos.");
+                    }
+                    break;
+                case 0:
+                    System.out.println("Saliste del programa :(");
+                    break;
+                            }
+        }
+
+        scanner.close();
+    }
+}
               
