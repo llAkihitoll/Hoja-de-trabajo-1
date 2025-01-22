@@ -22,7 +22,7 @@ public class LicuadoraEnSi implements Licuadora {
     public void apagar() {
         if (encendida) {
             encendida = false;
-            velocidad = 0; 
+            velocidad = 0; // Reinicia la velocidad al apagarla
         }
     }
 
