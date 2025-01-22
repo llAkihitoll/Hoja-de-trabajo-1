@@ -42,4 +42,30 @@ public class Main {
                         System.out.println("Peso actual en la licuadora: " + resultadoLlenar + " gramos.");
                     }
                     break;
+                case 4:
+                    int resultadoIncrementar = licuadora.incrementarVelocidad();
+                    if (resultadoIncrementar == -1) {
+                        System.out.println("Error: la licuadora esta apagada.");
+                    } else if (resultadoIncrementar == -2) {
+                        System.out.println("Error: ya esta en la velocidad máxima.");
+                    } else {
+                        System.out.println("Velocidad subida a: " + resultadoIncrementar);
+                    }
+                    break;
+                case 5:
+                    int resultadoDecrementar = licuadora.decrementarVelocidad();
+                    if (resultadoDecrementar == -1) {
+                        System.out.println("Error: la licuadora esta apagada.");
+                    } else if (resultadoDecrementar == -2) {
+                        System.out.println("Error: ya esta en la velocidad mínima.");
+                    } else {
+                        System.out.println("Velocidad bajada a: " + resultadoDecrementar);
+                    }
+                    break;
+                case 6:
+                    System.out.println("Velocidad actual: " + licuadora.consultarVelocidad());
+                    break;
+                case 7:
+                    System.out.println("¿Está llena? " + (licuadora.estarLlena() ? "Sí" : "No"));
+                    break;
               
